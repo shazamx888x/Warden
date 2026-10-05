@@ -1,0 +1,39 @@
+# Warden runtime dependencies.
+#
+# Chapters 1 to 14 run offline with only the standard library plus the
+# authoring tools below. Nothing here needs a cloud account or a key.
+
+# --- core: the gateway, the app, the red team, the evaluations -------------
+# These use the standard library only. Nothing is required, which is the point:
+# you can reproduce every number before you install anything heavy.
+
+# --- this project itself ------------------------------------------------------
+# Installs src/warden as a package (editable), so "python -m warden.demo" and
+# every script find it. Without this line the demo fails with
+# "No module named 'warden'".
+-e .
+
+# --- the Cloudflare chapter (calls the Workers AI and Vectorize APIs) ---------
+requests>=2.31
+
+# --- authoring: the guide, the deck, the thumbnail -------------------------
+python-docx==1.2.0
+python-pptx==1.0.2
+pillow>=11.0.0
+
+# --- tests -----------------------------------------------------------------
+pytest>=8.0.0
+
+# --- optional: the real PII engine (control W4 and W6) ---------------------
+# Presidio adds trained detection for names and places. It pulls in spaCy and
+# a model download, so it is optional; the regex engine runs without it and
+# the guide measures both. To use Presidio:
+#   pip install presidio-analyzer presidio-anonymizer
+#   python -m spacy download en_core_web_sm
+
+# --- optional: the real Prompt Guard classifier (control W2) ---------------
+# The offline stand-in needs none of this. To run the real model on a VM:
+#   pip install transformers torch
+
+# --- optional: the Cloudflare backend --------------------------------------
+#   pip install requests

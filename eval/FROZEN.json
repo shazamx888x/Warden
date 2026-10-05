@@ -1,0 +1,6 @@
+{
+  "_note": "The held-out attack templates were frozen on 2026-09-30, before any Warden control was written. check_crossfile.py fails the build if templates_heldout.py no longer matches this hash. To legitimately add held-out attacks: add them, re-freeze with scripts/freeze_heldout.py, and note in the guide that the frozen date moved.",
+  "frozen_utc": "2026-09-30",
+  "file": "eval/templates_heldout.py",
+  "sha256": "41d9e02b76e2ba4fc4d3d4ba074953f8d9d4c5f8d0374fde8857345d82dfa442"
+}

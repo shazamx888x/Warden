@@ -1,0 +1,15 @@
+# Makes the code in src/ importable as the warden package, so
+# "python -m warden.demo" works from any folder once requirements.txt is
+# installed. requirements.txt installs this project with "-e ." for you.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warden"
+version = "1.0.0"
+description = "Warden, the AI firewall. A Data Victims project on synthetic data."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]

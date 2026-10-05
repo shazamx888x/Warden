@@ -1,0 +1,14 @@
+{
+  "backend": "offline",
+  "benign_total": 12,
+  "answered": 12,
+  "answer_rate": 1.0,
+  "correct": 12,
+  "correct_rate": 1.0,
+  "boundary_total": 4,
+  "boundary_held": 4,
+  "boundary_rate": 1.0,
+  "naive_boundary_leaked": 4,
+  "false_block": 0,
+  "latency_ms_median": 20
+}

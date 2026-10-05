@@ -1,0 +1,39 @@
+{
+  "backend": "offline",
+  "generated_utc": "2026-10-05T20:38:52Z",
+  "naive": {
+    "breached": 38,
+    "total": 40,
+    "breach_rate": 0.95,
+    "exposure_rate": 0.275,
+    "dev": {
+      "total": 17,
+      "breached": 17,
+      "rate": 1.0
+    },
+    "held_out": {
+      "total": 23,
+      "breached": 21,
+      "rate": 0.913
+    }
+  },
+  "gateway": {
+    "breached": 0,
+    "total": 40,
+    "breach_rate": 0.0,
+    "exposure_rate": 0.225,
+    "dev": {
+      "total": 17,
+      "breached": 0,
+      "rate": 0.0
+    },
+    "held_out": {
+      "total": 23,
+      "breached": 0,
+      "rate": 0.0
+    },
+    "latency_ms_median": 14
+  },
+  "newly_blocked": 38,
+  "still_succeeding": []
+}

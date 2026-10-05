@@ -1,0 +1,23 @@
+{
+  "engine": "regex",
+  "total": 360,
+  "found": 360,
+  "recall": 1.0,
+  "by_kind": {
+    "NINO": {
+      "total": 120,
+      "found": 120,
+      "recall": 1.0
+    },
+    "SORT_CODE": {
+      "total": 120,
+      "found": 120,
+      "recall": 1.0
+    },
+    "EMAIL": {
+      "total": 120,
+      "found": 120,
+      "recall": 1.0
+    }
+  }
+}

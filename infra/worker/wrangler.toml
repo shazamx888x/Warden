@@ -1,0 +1,27 @@
+# Warden gateway Worker config.
+# VERIFIED against Cloudflare docs on the date in the guide, NOT yet deployed.
+# Fill in your own account id, then: npx wrangler deploy
+
+name = "warden-gateway"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Workers AI: Llama Guard 3, the chat model and embeddings.
+[ai]
+binding = "AI"
+
+# Vectorize: the HR document index. Create it first, and create the metadata
+# index on acl_group BEFORE upserting any vectors, or older vectors are not
+# filterable:
+#   npx wrangler vectorize create warden-hr-index --dimensions=768 --metric=cosine
+#   npx wrangler vectorize create-metadata-index warden-hr-index \
+#       --property-name=acl_group --type=string
+[[vectorize]]
+binding = "VEC"
+index_name = "warden-hr-index"
+
+[vars]
+COMPANY_DOMAIN = "peoplecraft.example"
+# CANARY and SYSTEM_PROMPT are set as secrets, not committed:
+#   npx wrangler secret put CANARY
+#   npx wrangler secret put SYSTEM_PROMPT

@@ -1,0 +1,8 @@
+{
+  "question": "How much annual leave do I get?",
+  "principal": {
+    "employee_id": "E0001",
+    "role": "employee",
+    "grants": ["public", "self:E0001"]
+  }
+}

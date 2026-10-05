@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Build previews and renders, not the deliverables themselves.
+assets/ppt_render/
+assets/guide_pages/
+assets/Warden_Build_Guide.pdf
+
+# Cloudflare and Oracle credentials, never committed.
+infra/worker/.dev.vars
+
+# The Vectorize upload file: large, and rebuilt by scripts/load_vectorize.py.
+results/vectorize.ndjson
+
+# Word lock files and the Wrangler local cache
+~$*
+infra/worker/.wrangler/

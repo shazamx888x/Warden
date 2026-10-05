@@ -1,0 +1,13 @@
+{
+  "seed": 20260930,
+  "employees": 120,
+  "candidates": 40,
+  "documents": 428,
+  "policies": 12,
+  "web_pages": 16,
+  "contracts": 120,
+  "payroll_registers": 120,
+  "cvs": 40,
+  "hostile_demo_docs": 4,
+  "departments": 4
+}
